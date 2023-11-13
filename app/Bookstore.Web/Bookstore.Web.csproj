@@ -282,6 +282,8 @@
     <Compile Include="Helpers\ImageTypesAttribute.cs" />
     <Compile Include="Helpers\IntExtensions.cs" />
     <Compile Include="Helpers\IOwinRequestExtensions.cs" />
+    <Compile Include="Helpers\IsbnSearch\IsbnSearch.cs" />
+    <Compile Include="Helpers\IsbnSearch\IsbnSearchResult.cs" />
     <Compile Include="Helpers\LocalAuthenticationMiddleware.cs" />
     <Compile Include="Helpers\MaxFileSizeAttribute.cs" />
     <Compile Include="Helpers\MvcHelpers.cs" />

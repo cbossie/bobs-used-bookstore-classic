@@ -4,6 +4,7 @@ using Bookstore.Domain.Books;
 using Bookstore.Domain.Carts;
 using Bookstore.Web.ViewModel.Search;
 using System.Web.Mvc;
+using Bookstore.Web.Helpers.IsbnSearch;
 
 namespace Bookstore.Web.Controllers
 {
@@ -30,7 +31,21 @@ namespace Bookstore.Web.Controllers
         {
             var book = await inventoryService.GetBookAsync(id);
 
-            return View(new SearchDetailsViewModel(book));
+            // Add ISBN Search Results
+            IsbnSearchResult isbnSearchResult = null;
+            if (!string.IsNullOrEmpty(book.ISBN))
+            {
+                IsbnSearch srch = new IsbnSearch();
+                isbnSearchResult = await srch.GetIsbnResults(book.ISBN);
+
+            }
+
+            return View(new SearchDetailsViewModel(book)
+            {
+                Publishers = isbnSearchResult?.Publishers,
+                NumberOfPages = isbnSearchResult?.NumberOfPages,
+                PublishDate = isbnSearchResult?.PublishDate
+            });
         }
 
         public async Task<ActionResult> AddItemToShoppingCart(int bookId)

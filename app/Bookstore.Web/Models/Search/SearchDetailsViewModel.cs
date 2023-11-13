@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using Bookstore.Domain.Books;
+using System.Collections.Generic;
 
 namespace Bookstore.Web.ViewModel.Search
 {
@@ -33,6 +34,16 @@ namespace Bookstore.Web.ViewModel.Search
         [Display(Name = "$$")] public decimal MinPrice { get; set; }
 
         public int Quantity { get; set; }
+
+        /// <summary>
+        /// ISBN Search Fields
+        /// </summary>
+        [Display(Name = "Publishers")] public List<string> Publishers { get; set; }
+
+        [Display(Name = "Number of Pages")] public int? NumberOfPages { get; set; }
+
+        [Display(Name = "Publish Date")] public string PublishDate { get; set; }
+
 
         public string Summary { get; set; }
 

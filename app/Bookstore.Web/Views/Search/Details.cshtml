@@ -17,44 +17,63 @@
                         <div class="media-body">
                             <table class="table">
                                 <tbody>
-                                <tr>
-                                    <th scope="col">Title</th>
-                                    <td>@Model.BookName</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Author</th>
-                                    <td>@Model.Author</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Publisher</th>
-                                    <td>@Model.PublisherName</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Genre</th>
-                                    <td>@Model.GenreName</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Condition</th>
-                                    <td>@Model.ConditionName</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Price</th>
-                                    <td>@Model.MinPrice.ToString("C")</td>
-                                </tr>
-                                @if (string.IsNullOrEmpty(Model.Summary))
-                                {
                                     <tr>
-                                        <th scope="col">Description</th>
-                                        <td>No description found.</td>
+                                        <th scope="col">Title</th>
+                                        <td>@Model.BookName</td>
                                     </tr>
-                                }
-                                else
-                                {
                                     <tr>
-                                        <th scope="col">Description</th>
-                                        <td>@Model.Summary)</td>
+                                        <th scope="col">Author</th>
+                                        <td>@Model.Author</td>
                                     </tr>
-                                }
+                                    <tr>
+                                        <th scope="col">Publisher</th>
+                                        <td>@Model.PublisherName</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Genre</th>
+                                        <td>@Model.GenreName</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Condition</th>
+                                        <td>@Model.ConditionName</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Price</th>
+                                        <td>@Model.MinPrice.ToString("C")</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="col">Pages (from openlibrary)</th>
+                                        <td>@Model.NumberOfPages</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Publish Date (from openlibrary)</th>
+                                        <td>@Model.PublishDate</td>
+                                    </tr>
+                                    @if (Model.Publishers.Any())
+                                    {
+                                        <tr>
+                                            <th scope="col">Publishers (from openlibrary)</th>
+                                            <td>@Html.Raw(string.Join("<br/>", Model.Publishers))</td>
+                                        </tr>
+                                    }
+
+
+
+                                    @if (string.IsNullOrEmpty(Model.Summary))
+                                    {
+                                        <tr>
+                                            <th scope="col">Description</th>
+                                            <td>No description found.</td>
+                                        </tr>
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <th scope="col">Description</th>
+                                            <td>@Model.Summary)</td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>
