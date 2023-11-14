@@ -81,6 +81,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="IsbnExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IsbnExtensions.1.0.0\lib\netstandard2.0\IsbnExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -682,10 +685,6 @@
     <ProjectReference Include="..\Bookstore.Domain\Bookstore.Domain.csproj">
       <Project>{d38deaea-ce1c-4309-83c8-626d44ca5301}</Project>
       <Name>Bookstore.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IsbnExtensions\IsbnExtensions.csproj">
-      <Project>{b3ecd467-2a3e-4aba-8029-d0fca551ffa4}</Project>
-      <Name>IsbnExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

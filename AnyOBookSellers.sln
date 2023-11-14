@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookstore.Common", "app\Bookstore.Common\Bookstore.Common.csproj", "{368F04E5-5093-4987-99A1-92BF5C8E8673}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsbnExtensions", "app\IsbnExtensions\IsbnExtensions.csproj", "{B3ECD467-2A3E-4ABA-8029-D0FCA551FFA4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{01C3995F-9323-460C-B1E7-02B5CCFC972C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsbnExtensions", "app\IsbnExtensions\IsbnExtensions.csproj", "{FDC394B8-94D5-4E69-8991-618CA196462C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,15 +43,18 @@ Global
 		{368F04E5-5093-4987-99A1-92BF5C8E8673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{368F04E5-5093-4987-99A1-92BF5C8E8673}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{368F04E5-5093-4987-99A1-92BF5C8E8673}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3ECD467-2A3E-4ABA-8029-D0FCA551FFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3ECD467-2A3E-4ABA-8029-D0FCA551FFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3ECD467-2A3E-4ABA-8029-D0FCA551FFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3ECD467-2A3E-4ABA-8029-D0FCA551FFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC394B8-94D5-4E69-8991-618CA196462C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC394B8-94D5-4E69-8991-618CA196462C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC394B8-94D5-4E69-8991-618CA196462C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC394B8-94D5-4E69-8991-618CA196462C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D60D37B9-D217-483C-BF42-FD824FD772D5}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDC394B8-94D5-4E69-8991-618CA196462C} = {01C3995F-9323-460C-B1E7-02B5CCFC972C}
 	EndGlobalSection
 EndGlobal
