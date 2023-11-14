@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Bookstore.Web.Helpers.IsbnSearch
+namespace IsbnExtensions.IsbnSearch
 {
 
     public class IsbnSearchResult

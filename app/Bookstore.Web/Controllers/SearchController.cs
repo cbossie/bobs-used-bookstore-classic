@@ -4,7 +4,7 @@ using Bookstore.Domain.Books;
 using Bookstore.Domain.Carts;
 using Bookstore.Web.ViewModel.Search;
 using System.Web.Mvc;
-using Bookstore.Web.Helpers.IsbnSearch;
+using IsbnExtensions.IsbnSearch;
 
 namespace Bookstore.Web.Controllers
 {

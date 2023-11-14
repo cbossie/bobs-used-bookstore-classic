@@ -282,8 +282,6 @@
     <Compile Include="Helpers\ImageTypesAttribute.cs" />
     <Compile Include="Helpers\IntExtensions.cs" />
     <Compile Include="Helpers\IOwinRequestExtensions.cs" />
-    <Compile Include="Helpers\IsbnSearch\IsbnSearch.cs" />
-    <Compile Include="Helpers\IsbnSearch\IsbnSearchResult.cs" />
     <Compile Include="Helpers\LocalAuthenticationMiddleware.cs" />
     <Compile Include="Helpers\MaxFileSizeAttribute.cs" />
     <Compile Include="Helpers\MvcHelpers.cs" />
@@ -673,6 +671,10 @@
     <Content Include="Scripts\jquery\jquery.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\IsbnExtensions\IsbnExtensions.csproj">
+      <Project>{16ba5da8-fc33-4213-8f6a-114f5a5875b4}</Project>
+      <Name>IsbnExtensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bookstore.Common\Bookstore.Common.csproj">
       <Project>{368f04e5-5093-4987-99a1-92bf5c8e8673}</Project>
       <Name>Bookstore.Common</Name>

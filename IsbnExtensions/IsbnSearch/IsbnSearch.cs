@@ -1,5 +1,4 @@
-﻿using Microsoft.Owin.Security.Provider;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +7,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace Bookstore.Web.Helpers.IsbnSearch
+namespace IsbnExtensions.IsbnSearch
 {
     /***
      * 

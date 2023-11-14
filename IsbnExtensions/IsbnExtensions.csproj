@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Title>AnyO Bookstore Isbn Extension Utilities</Title>
+    <Company>AnyO Books</Company>
+    <Product>Isbn Extensions</Product>
+    <Description>Includes additional Functionality for consuming ISBN data in your projects</Description>
+    <Copyright>2023 AnyO Books</Copyright>
+    <PackageProjectUrl>https://aws.amazon.com</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
