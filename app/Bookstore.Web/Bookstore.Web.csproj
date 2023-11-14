@@ -671,10 +671,6 @@
     <Content Include="Scripts\jquery\jquery.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IsbnExtensions\IsbnExtensions.csproj">
-      <Project>{16ba5da8-fc33-4213-8f6a-114f5a5875b4}</Project>
-      <Name>IsbnExtensions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Bookstore.Common\Bookstore.Common.csproj">
       <Project>{368f04e5-5093-4987-99a1-92bf5c8e8673}</Project>
       <Name>Bookstore.Common</Name>
@@ -686,6 +682,10 @@
     <ProjectReference Include="..\Bookstore.Domain\Bookstore.Domain.csproj">
       <Project>{d38deaea-ce1c-4309-83c8-626d44ca5301}</Project>
       <Name>Bookstore.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IsbnExtensions\IsbnExtensions.csproj">
+      <Project>{b3ecd467-2a3e-4aba-8029-d0fca551ffa4}</Project>
+      <Name>IsbnExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
