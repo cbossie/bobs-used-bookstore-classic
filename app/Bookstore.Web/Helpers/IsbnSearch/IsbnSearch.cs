@@ -35,7 +35,7 @@ namespace Bookstore.Web.Helpers.IsbnSearch
 
                 var token = JObject.Parse(responseFromServer).SelectToken(string.Format("ISBN:{0}.details", isbn));
 
-                var deserializedResult = token.ToObject<IsbnSearchResult>();
+                var deserializedResult = token?.ToObject<IsbnSearchResult>() ?? new IsbnSearchResult();
 
                 return deserializedResult;
             }
