@@ -45,6 +45,32 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bookstore.Common\Bookstore.Common.csproj">
+      <Project>{368f04e5-5093-4987-99a1-92bf5c8e8673}</Project>
+      <Name>Bookstore.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookstore.Data\Bookstore.Data.csproj">
+      <Project>{3212526f-2d18-4a21-9b14-8b045ebf96f4}</Project>
+      <Name>Bookstore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookstore.Domain\Bookstore.Domain.csproj">
+      <Project>{d38deaea-ce1c-4309-83c8-626d44ca5301}</Project>
+      <Name>Bookstore.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\AWSSDK.CloudWatchLogs.3.7.0.5\analyzers\dotnet\cs\AWSSDK.CloudWatchLogs.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\packages\AWSSDK.Rekognition.3.7.105.1\analyzers\dotnet\cs\AWSSDK.Rekognition.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\packages\AWSSDK.S3.3.7.104.2\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\packages\AWSSDK.SimpleSystemsManagement.3.7.104.26\analyzers\dotnet\cs\AWSSDK.SimpleSystemsManagement.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Autofac.Owin" Version="*" />
     <PackageReference Include="Microsoft.AspNetCore.Owin" Version="6.0.29" />
     <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.4.0" />
@@ -85,38 +111,9 @@
     <PackageReference Include="System.Memory" Version="4.5.5" />
     <PackageReference Include="AWS.Logger.NLog" Version="3.3.4" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bookstore.Common\Bookstore.Common.csproj">
-      <Project>{368f04e5-5093-4987-99a1-92bf5c8e8673}</Project>
-      <Name>Bookstore.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Bookstore.Data\Bookstore.Data.csproj">
-      <Project>{3212526f-2d18-4a21-9b14-8b045ebf96f4}</Project>
-      <Name>Bookstore.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Bookstore.Domain\Bookstore.Domain.csproj">
-      <Project>{d38deaea-ce1c-4309-83c8-626d44ca5301}</Project>
-      <Name>Bookstore.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\..\packages\AWSSDK.CloudWatchLogs.3.7.0.5\analyzers\dotnet\cs\AWSSDK.CloudWatchLogs.CodeAnalysis.dll" />
-    <Analyzer Include="..\..\packages\AWSSDK.Rekognition.3.7.105.1\analyzers\dotnet\cs\AWSSDK.Rekognition.CodeAnalysis.dll" />
-    <Analyzer Include="..\..\packages\AWSSDK.S3.3.7.104.2\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
-    <Analyzer Include="..\..\packages\AWSSDK.SimpleSystemsManagement.3.7.104.26\analyzers\dotnet\cs\AWSSDK.SimpleSystemsManagement.CodeAnalysis.dll" />
-  </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" />
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
-  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Import Project="..\..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('..\..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
 </Project>
