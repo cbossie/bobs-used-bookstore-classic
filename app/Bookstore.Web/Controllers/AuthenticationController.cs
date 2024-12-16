@@ -2,6 +2,7 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using BobsBookstoreClassic.Data;
+using Microsoft.AspNetCore.Http.Extensions;
 
 
 namespace Bookstore.Web.Controllers
@@ -41,7 +42,7 @@ namespace Bookstore.Web.Controllers
 
             var domain = BookstoreConfiguration.Get("Authentication/Cognito/CognitoDomain");
             var clientId = BookstoreConfiguration.Get("Authentication/Cognito/LocalClientId");
-            var logoutUri = $"{Request.Url.Scheme}://{Request.Url.Host}:{Request.Url.Port}/";
+            var logoutUri = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/";
 
             return Redirect($"{domain}/logout?client_id={clientId}&logout_uri={logoutUri}");
         }
